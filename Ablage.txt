@@ -1,0 +1,42 @@
+opts, rest = getopt.getopt(sys.argv[1:], "vbo:")
+verb=False
+output=""
+
+for opt, arg in opts:
+    if opt == "-v":
+        verb = True
+    if opt == "-o":
+        output = arg
+
+def get_process():
+    prog=[]
+    print("PID\t\tName\t\ttime")
+    for p in psutil.process_iter():
+        with p.oneshot():
+            process_pid = p.pid
+            if process_pid == 0:
+                continue
+            process_name = p.name()
+            try:
+                process_Ctime = datetime.datetime.fromtimestamp(p.create_time())
+            except OSError:
+                process_Ctime = datetime.datetime.fromtimestamp(psutil.boot_time())
+
+        #print(str(process_pid)+"\t\t"+process_name+"\t\t"+str(process_Ctime))
+
+x=get_process()
+print(x)
+
+
+
+
+
+
+x=psutil.users()    #suser(name='Dragback', terminal=None, host=None, started=1616452961.6200457, pid=None)
+pc.user_name = x[0].name
+pc.user_started = x[0].started
+pc.user_terminal = x[0].terminal
+del x
+
+uname = platform.uname()
+print(f"System: {uname.system}")

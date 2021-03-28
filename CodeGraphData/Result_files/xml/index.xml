@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="classnetwork_monitoring_1_1pc" kind="class"><name>networkMonitoring::pc</name>
+    <member refid="classnetwork_monitoring_1_1pc_1ab318376c2597286e847d61a0514aa024" kind="variable"><name>node</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1afb34380c6582a8828888cfff2a3dee56" kind="variable"><name>os_system</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a9571d3864b737bbdab3930761e4d098c" kind="variable"><name>os_rel</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ae43f602f8af385f98f9bffcc915e0d37" kind="variable"><name>os_ver</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1adae2ca1e31efae67b4a1ab3b4fe04f63" kind="variable"><name>user_name</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1aff8cfd45be9ee99b729c930fc1497c0b" kind="variable"><name>user_started</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a41b4249066e1117292182af761c0b8d4" kind="variable"><name>user_terminal</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a02c8135a3105d014772e8a6588546444" kind="variable"><name>cpu_machine</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1aa36bca4b816680d4336e3bc55c6eae1d" kind="variable"><name>cpu_name</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ab4b892c12c206f5e4189a7fa6a79b774" kind="variable"><name>cpu_realCores</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1abe459589634f3844b251e9353c81a3f6" kind="variable"><name>cpu_logiCores</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a27412b1699a2251b9a6400ec79801a4c" kind="variable"><name>cpu_frqMax</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a79f090629d48609fe7c068ac78d37343" kind="variable"><name>cpu_frqCur</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ac6756c4f82775abff90b5a1d07b87432" kind="variable"><name>cpu_usage</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1af9b941f36740cc0a1da842417df9fed5" kind="variable"><name>cpu_coreUsage</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a69a9bd1ac9c1137ff74eb80437b3fbc6" kind="variable"><name>ram_total</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ab36793360bd7afe157f6a4f95b6acdac" kind="variable"><name>ram_avail</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a071054aab3529f2b7a70325d52b78d66" kind="variable"><name>ram_used</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ad44ecae598b88a43a983cc60bd3d9fc1" kind="variable"><name>ram_perc</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a48016a7b5f0c49cf59a3ce75d16b9d4b" kind="variable"><name>ram_Stotal</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a6cd39db1a27b8b33caef1f9c9d88655a" kind="variable"><name>ram_Sfree</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a2a3ea0c0b04ac40ddaff6379da6dca69" kind="variable"><name>ram_Sused</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ad6f6b781e772b000c3041fb6f219011f" kind="variable"><name>ram_Sperc</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ac96be2c7f12426140c17d5347ec2468c" kind="variable"><name>disk_list</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a65104c1b20d0741e7b690678f690ce3d" kind="variable"><name>disk_read</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a41299a5485b3900af86498d32f179f68" kind="variable"><name>disk_write</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1af84b6770fc12370049df76701c91f432" kind="variable"><name>gpu_list</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ae80d387e8b45a4216558eecc74b2bf17" kind="variable"><name>if_list</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a61492f5433825f8b6ff3e95924169de0" kind="variable"><name>node</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ad594b93d39425649431d3fea86747fb8" kind="variable"><name>os_system</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1af2906ac95abf077765103293c0f544d6" kind="variable"><name>os_rel</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a6ae6284456681e5a942a82ba143d8abc" kind="variable"><name>os_ver</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1adcb6206faf28164e3a440770b81915c1" kind="variable"><name>cpu_machine</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1abe0b2bc112f99a68aa5f66edacdfee4c" kind="variable"><name>cpu_name</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a5afbd91f8ceacbf59dbfea28f910000a" kind="variable"><name>cpu_realCores</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a49d60188717b7e1b4af3fdf2f8855ae8" kind="variable"><name>cpu_logiCores</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a439f6ce05ee14c4319409936a83cf0ae" kind="variable"><name>cpu_frqMax</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1aa1ad46679f9d90ec0f2bec0ae2d85086" kind="variable"><name>cpu_frqCur</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a495c89daba6744713127e3bf1c3d6b2d" kind="variable"><name>cpu_usage</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a723ed74e361bcd90e9800d6e76dc632c" kind="variable"><name>ram_total</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ab4a06e28d5c0e176274d2776ac9ca526" kind="variable"><name>ram_avail</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a76f14f06cc49e48284a598ea416e31d5" kind="variable"><name>ram_used</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a7eb3c440aab333b02f78467457f61347" kind="variable"><name>ram_perc</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a4ea73b60b704824d8b869aff8f3c8e7d" kind="variable"><name>ram_Stotal</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a183899ea2d376eb6b94777913381b772" kind="variable"><name>ram_Sfree</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1abe6ffd002a5b12c33561e839d0946cff" kind="variable"><name>ram_Sused</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1acc3dd2ef331d68fe4cc2257c76b40fcc" kind="variable"><name>ram_Sperc</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a92dfc33bcb8299038a9775b8bfad15ae" kind="variable"><name>disk_read</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1ad5b7edc919673e7bbd1d914f94e7af20" kind="variable"><name>disk_write</name></member>
+    <member refid="classnetwork_monitoring_1_1pc_1a2b0be0d7e34b75bf8373c8a3f5c88c79" kind="function"><name>__init__</name></member>
+  </compound>
+  <compound refid="namespacenetwork_monitoring" kind="namespace"><name>networkMonitoring</name>
+    <member refid="namespacenetwork_monitoring_1aae1e979ce76b9df0f2ba780fc63ef36f" kind="variable"><name>verbose</name></member>
+    <member refid="namespacenetwork_monitoring_1a07c89eb7c895b5427079be640a4bf76f" kind="variable"><name>network</name></member>
+    <member refid="namespacenetwork_monitoring_1a61968a0ce49704db885e29dba20cf3e3" kind="variable"><name>local</name></member>
+    <member refid="namespacenetwork_monitoring_1af1a5b93605ac3038c9bda05886a7d082" kind="variable"><name>full</name></member>
+    <member refid="namespacenetwork_monitoring_1a2db1a9dc1494289b0d2a08ea396ec1f7" kind="variable"><name>path</name></member>
+    <member refid="namespacenetwork_monitoring_1ad938d61c9dededb640be4de464a5351e" kind="variable"><name>file</name></member>
+    <member refid="namespacenetwork_monitoring_1af4bc86a1af5e68613445d2e78ff2413d" kind="variable"><name>result_local</name></member>
+    <member refid="namespacenetwork_monitoring_1aaf13599181ccbdccadac6ccb61c2790d" kind="variable"><name>result_network</name></member>
+    <member refid="namespacenetwork_monitoring_1a9d690c7ee140cb92a02e77c3b0830926" kind="function"><name>debug</name></member>
+    <member refid="namespacenetwork_monitoring_1aa35683928b3d9362ae0e05cd50e511cc" kind="function"><name>debug_print</name></member>
+    <member refid="namespacenetwork_monitoring_1af001beac9a6d0ab8232659f8d77646b8" kind="function"><name>error</name></member>
+    <member refid="namespacenetwork_monitoring_1ac403feff067d917b840c4bf44cbd4d72" kind="function"><name>adj_size</name></member>
+    <member refid="namespacenetwork_monitoring_1af6a94571b7a14ddc753b6f4b6c11b150" kind="function"><name>get_network</name></member>
+    <member refid="namespacenetwork_monitoring_1a2bad3a65a3e2ccffc286683f29e25437" kind="function"><name>get_local</name></member>
+  </compound>
+  <compound refid="network_monitoring_8py" kind="file"><name>networkMonitoring.py</name>
+  </compound>
+  <compound refid="dir_812d9573f7c4f5da5b364a1134df56c8" kind="dir"><name>C:/Users/Dragback</name>
+  </compound>
+  <compound refid="dir_848cb91a27da6f163247ba74ed1be38f" kind="dir"><name>C:/Users/Dragback/source/repos/networkMonitoring</name>
+  </compound>
+  <compound refid="dir_8654a273f196ccf6a741364c13450bd8" kind="dir"><name>C:/Users/Dragback/source/repos</name>
+  </compound>
+  <compound refid="dir_acd463d9ace4ef7352f9b3cf851fc69c" kind="dir"><name>C:/Users/Dragback/source</name>
+  </compound>
+  <compound refid="dir_d522931ffa1371640980b621734a4381" kind="dir"><name>C:/Users</name>
+  </compound>
+</doxygenindex>

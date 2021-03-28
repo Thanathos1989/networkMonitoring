@@ -1,0 +1,747 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classnetwork_monitoring_1_1pc" kind="class" prot="public">
+    <compoundname>networkMonitoring::pc</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ab318376c2597286e847d61a0514aa024" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string networkMonitoring.pc::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="97" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1afb34380c6582a8828888cfff2a3dee56" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string networkMonitoring.pc::os_system</definition>
+        <argsstring></argsstring>
+        <name>os_system</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="99" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a9571d3864b737bbdab3930761e4d098c" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string networkMonitoring.pc::os_rel</definition>
+        <argsstring></argsstring>
+        <name>os_rel</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="100" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ae43f602f8af385f98f9bffcc915e0d37" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string networkMonitoring.pc::os_ver</definition>
+        <argsstring></argsstring>
+        <name>os_ver</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="101" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1adae2ca1e31efae67b4a1ab3b4fe04f63" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string networkMonitoring.pc::user_name</definition>
+        <argsstring></argsstring>
+        <name>user_name</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="103" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1aff8cfd45be9ee99b729c930fc1497c0b" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::user_started</definition>
+        <argsstring></argsstring>
+        <name>user_started</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="104" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a41b4249066e1117292182af761c0b8d4" prot="public" static="yes" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::user_terminal</definition>
+        <argsstring></argsstring>
+        <name>user_terminal</name>
+        <initializer>= None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="105" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a02c8135a3105d014772e8a6588546444" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string networkMonitoring.pc::cpu_machine</definition>
+        <argsstring></argsstring>
+        <name>cpu_machine</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="107" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1aa36bca4b816680d4336e3bc55c6eae1d" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string networkMonitoring.pc::cpu_name</definition>
+        <argsstring></argsstring>
+        <name>cpu_name</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="108" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ab4b892c12c206f5e4189a7fa6a79b774" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::cpu_realCores</definition>
+        <argsstring></argsstring>
+        <name>cpu_realCores</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="109" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1abe459589634f3844b251e9353c81a3f6" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::cpu_logiCores</definition>
+        <argsstring></argsstring>
+        <name>cpu_logiCores</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="110" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a27412b1699a2251b9a6400ec79801a4c" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::cpu_frqMax</definition>
+        <argsstring></argsstring>
+        <name>cpu_frqMax</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="111" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a79f090629d48609fe7c068ac78d37343" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::cpu_frqCur</definition>
+        <argsstring></argsstring>
+        <name>cpu_frqCur</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="112" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ac6756c4f82775abff90b5a1d07b87432" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::cpu_usage</definition>
+        <argsstring></argsstring>
+        <name>cpu_usage</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="113" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1af9b941f36740cc0a1da842417df9fed5" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list networkMonitoring.pc::cpu_coreUsage</definition>
+        <argsstring></argsstring>
+        <name>cpu_coreUsage</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="114" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a69a9bd1ac9c1137ff74eb80437b3fbc6" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::ram_total</definition>
+        <argsstring></argsstring>
+        <name>ram_total</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="116" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ab36793360bd7afe157f6a4f95b6acdac" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::ram_avail</definition>
+        <argsstring></argsstring>
+        <name>ram_avail</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="117" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a071054aab3529f2b7a70325d52b78d66" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::ram_used</definition>
+        <argsstring></argsstring>
+        <name>ram_used</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="118" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ad44ecae598b88a43a983cc60bd3d9fc1" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::ram_perc</definition>
+        <argsstring></argsstring>
+        <name>ram_perc</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="119" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a48016a7b5f0c49cf59a3ce75d16b9d4b" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::ram_Stotal</definition>
+        <argsstring></argsstring>
+        <name>ram_Stotal</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="120" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a6cd39db1a27b8b33caef1f9c9d88655a" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::ram_Sfree</definition>
+        <argsstring></argsstring>
+        <name>ram_Sfree</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="121" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a2a3ea0c0b04ac40ddaff6379da6dca69" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::ram_Sused</definition>
+        <argsstring></argsstring>
+        <name>ram_Sused</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="122" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ad6f6b781e772b000c3041fb6f219011f" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::ram_Sperc</definition>
+        <argsstring></argsstring>
+        <name>ram_Sperc</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="123" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ac96be2c7f12426140c17d5347ec2468c" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list networkMonitoring.pc::disk_list</definition>
+        <argsstring></argsstring>
+        <name>disk_list</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="125" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a65104c1b20d0741e7b690678f690ce3d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::disk_read</definition>
+        <argsstring></argsstring>
+        <name>disk_read</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="126" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a41299a5485b3900af86498d32f179f68" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int networkMonitoring.pc::disk_write</definition>
+        <argsstring></argsstring>
+        <name>disk_write</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="127" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1af84b6770fc12370049df76701c91f432" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list networkMonitoring.pc::gpu_list</definition>
+        <argsstring></argsstring>
+        <name>gpu_list</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="129" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ae80d387e8b45a4216558eecc74b2bf17" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list networkMonitoring.pc::if_list</definition>
+        <argsstring></argsstring>
+        <name>if_list</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="131" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a61492f5433825f8b6ff3e95924169de0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="137" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ad594b93d39425649431d3fea86747fb8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::os_system</definition>
+        <argsstring></argsstring>
+        <name>os_system</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="138" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1af2906ac95abf077765103293c0f544d6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::os_rel</definition>
+        <argsstring></argsstring>
+        <name>os_rel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="139" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a6ae6284456681e5a942a82ba143d8abc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::os_ver</definition>
+        <argsstring></argsstring>
+        <name>os_ver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="140" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1adcb6206faf28164e3a440770b81915c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::cpu_machine</definition>
+        <argsstring></argsstring>
+        <name>cpu_machine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="141" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1abe0b2bc112f99a68aa5f66edacdfee4c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::cpu_name</definition>
+        <argsstring></argsstring>
+        <name>cpu_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="142" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a5afbd91f8ceacbf59dbfea28f910000a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::cpu_realCores</definition>
+        <argsstring></argsstring>
+        <name>cpu_realCores</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="146" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a49d60188717b7e1b4af3fdf2f8855ae8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::cpu_logiCores</definition>
+        <argsstring></argsstring>
+        <name>cpu_logiCores</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="147" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a439f6ce05ee14c4319409936a83cf0ae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::cpu_frqMax</definition>
+        <argsstring></argsstring>
+        <name>cpu_frqMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="148" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1aa1ad46679f9d90ec0f2bec0ae2d85086" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::cpu_frqCur</definition>
+        <argsstring></argsstring>
+        <name>cpu_frqCur</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="149" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a495c89daba6744713127e3bf1c3d6b2d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::cpu_usage</definition>
+        <argsstring></argsstring>
+        <name>cpu_usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="150" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a723ed74e361bcd90e9800d6e76dc632c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::ram_total</definition>
+        <argsstring></argsstring>
+        <name>ram_total</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="157" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ab4a06e28d5c0e176274d2776ac9ca526" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::ram_avail</definition>
+        <argsstring></argsstring>
+        <name>ram_avail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="158" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a76f14f06cc49e48284a598ea416e31d5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::ram_used</definition>
+        <argsstring></argsstring>
+        <name>ram_used</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="159" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a7eb3c440aab333b02f78467457f61347" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::ram_perc</definition>
+        <argsstring></argsstring>
+        <name>ram_perc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="160" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a4ea73b60b704824d8b869aff8f3c8e7d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::ram_Stotal</definition>
+        <argsstring></argsstring>
+        <name>ram_Stotal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="161" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a183899ea2d376eb6b94777913381b772" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::ram_Sfree</definition>
+        <argsstring></argsstring>
+        <name>ram_Sfree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="162" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1abe6ffd002a5b12c33561e839d0946cff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::ram_Sused</definition>
+        <argsstring></argsstring>
+        <name>ram_Sused</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="163" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1acc3dd2ef331d68fe4cc2257c76b40fcc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::ram_Sperc</definition>
+        <argsstring></argsstring>
+        <name>ram_Sperc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="164" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1a92dfc33bcb8299038a9775b8bfad15ae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::disk_read</definition>
+        <argsstring></argsstring>
+        <name>disk_read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="179" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetwork_monitoring_1_1pc_1ad5b7edc919673e7bbd1d914f94e7af20" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.pc::disk_write</definition>
+        <argsstring></argsstring>
+        <name>disk_write</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="180" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnetwork_monitoring_1_1pc_1a2b0be0d7e34b75bf8373c8a3f5c88c79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def networkMonitoring.pc.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="134" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="134" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ENDE Klassen. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="96" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="96" bodyend="201"/>
+    <listofallmembers>
+      <member refid="classnetwork_monitoring_1_1pc_1a2b0be0d7e34b75bf8373c8a3f5c88c79" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>__init__</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1af9b941f36740cc0a1da842417df9fed5" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_coreUsage</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a79f090629d48609fe7c068ac78d37343" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_frqCur</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1aa1ad46679f9d90ec0f2bec0ae2d85086" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_frqCur</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a27412b1699a2251b9a6400ec79801a4c" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_frqMax</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a439f6ce05ee14c4319409936a83cf0ae" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_frqMax</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1abe459589634f3844b251e9353c81a3f6" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_logiCores</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a49d60188717b7e1b4af3fdf2f8855ae8" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_logiCores</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a02c8135a3105d014772e8a6588546444" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_machine</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1adcb6206faf28164e3a440770b81915c1" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_machine</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1aa36bca4b816680d4336e3bc55c6eae1d" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_name</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1abe0b2bc112f99a68aa5f66edacdfee4c" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_name</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ab4b892c12c206f5e4189a7fa6a79b774" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_realCores</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a5afbd91f8ceacbf59dbfea28f910000a" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_realCores</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ac6756c4f82775abff90b5a1d07b87432" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_usage</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a495c89daba6744713127e3bf1c3d6b2d" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>cpu_usage</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ac96be2c7f12426140c17d5347ec2468c" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>disk_list</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a65104c1b20d0741e7b690678f690ce3d" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>disk_read</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a92dfc33bcb8299038a9775b8bfad15ae" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>disk_read</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a41299a5485b3900af86498d32f179f68" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>disk_write</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ad5b7edc919673e7bbd1d914f94e7af20" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>disk_write</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1af84b6770fc12370049df76701c91f432" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>gpu_list</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ae80d387e8b45a4216558eecc74b2bf17" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>if_list</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ab318376c2597286e847d61a0514aa024" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>node</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a61492f5433825f8b6ff3e95924169de0" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>node</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a9571d3864b737bbdab3930761e4d098c" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>os_rel</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1af2906ac95abf077765103293c0f544d6" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>os_rel</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1afb34380c6582a8828888cfff2a3dee56" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>os_system</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ad594b93d39425649431d3fea86747fb8" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>os_system</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ae43f602f8af385f98f9bffcc915e0d37" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>os_ver</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a6ae6284456681e5a942a82ba143d8abc" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>os_ver</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ab36793360bd7afe157f6a4f95b6acdac" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_avail</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ab4a06e28d5c0e176274d2776ac9ca526" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_avail</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ad44ecae598b88a43a983cc60bd3d9fc1" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_perc</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a7eb3c440aab333b02f78467457f61347" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_perc</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a6cd39db1a27b8b33caef1f9c9d88655a" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_Sfree</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a183899ea2d376eb6b94777913381b772" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_Sfree</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1ad6f6b781e772b000c3041fb6f219011f" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_Sperc</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1acc3dd2ef331d68fe4cc2257c76b40fcc" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_Sperc</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a48016a7b5f0c49cf59a3ce75d16b9d4b" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_Stotal</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a4ea73b60b704824d8b869aff8f3c8e7d" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_Stotal</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a2a3ea0c0b04ac40ddaff6379da6dca69" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_Sused</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1abe6ffd002a5b12c33561e839d0946cff" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_Sused</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a69a9bd1ac9c1137ff74eb80437b3fbc6" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_total</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a723ed74e361bcd90e9800d6e76dc632c" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_total</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a071054aab3529f2b7a70325d52b78d66" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_used</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a76f14f06cc49e48284a598ea416e31d5" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>ram_used</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1adae2ca1e31efae67b4a1ab3b4fe04f63" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>user_name</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1aff8cfd45be9ee99b729c930fc1497c0b" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>user_started</name></member>
+      <member refid="classnetwork_monitoring_1_1pc_1a41b4249066e1117292182af761c0b8d4" prot="public" virt="non-virtual"><scope>networkMonitoring::pc</scope><name>user_terminal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

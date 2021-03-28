@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespacenetwork_monitoring" kind="namespace">
+    <compoundname>networkMonitoring</compoundname>
+    <innerclass refid="classnetwork_monitoring_1_1pc" prot="public">networkMonitoring::pc</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacenetwork_monitoring_1aae1e979ce76b9df0f2ba780fc63ef36f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+<para>VAR. </para>        </briefdescription>
+        <detaileddescription>
+<para>Abfrage der Operatoren. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="9" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenetwork_monitoring_1a07c89eb7c895b5427079be640a4bf76f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.network</definition>
+        <argsstring></argsstring>
+        <name>network</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="10" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenetwork_monitoring_1a61968a0ce49704db885e29dba20cf3e3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.local</definition>
+        <argsstring></argsstring>
+        <name>local</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="11" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenetwork_monitoring_1af1a5b93605ac3038c9bda05886a7d082" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>networkMonitoring.full</definition>
+        <argsstring></argsstring>
+        <name>full</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="12" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenetwork_monitoring_1a2db1a9dc1494289b0d2a08ea396ec1f7" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>networkMonitoring.path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <initializer>= &quot;.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="13" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenetwork_monitoring_1ad938d61c9dededb640be4de464a5351e" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string networkMonitoring.file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <initializer>= &quot;/Scan.json&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="14" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenetwork_monitoring_1af4bc86a1af5e68613445d2e78ff2413d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list networkMonitoring.result_local</definition>
+        <argsstring></argsstring>
+        <name>result_local</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="15" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenetwork_monitoring_1aaf13599181ccbdccadac6ccb61c2790d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list networkMonitoring.result_network</definition>
+        <argsstring></argsstring>
+        <name>result_network</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="16" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenetwork_monitoring_1a9d690c7ee140cb92a02e77c3b0830926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def networkMonitoring.debug</definition>
+        <argsstring></argsstring>
+        <name>debug</name>
+        <briefdescription>
+<para>Programm. </para>        </briefdescription>
+        <detaileddescription>
+<para>Funktionen </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="24" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="24" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenetwork_monitoring_1aa35683928b3d9362ae0e05cd50e511cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def networkMonitoring.debug_print</definition>
+        <argsstring></argsstring>
+        <name>debug_print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="26" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenetwork_monitoring_1af001beac9a6d0ab8232659f8d77646b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def networkMonitoring.error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="34" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenetwork_monitoring_1ac403feff067d917b840c4bf44cbd4d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def networkMonitoring.adj_size</definition>
+        <argsstring></argsstring>
+        <name>adj_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="37" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="37" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenetwork_monitoring_1af6a94571b7a14ddc753b6f4b6c11b150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def networkMonitoring.get_network</definition>
+        <argsstring></argsstring>
+        <name>get_network</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="45" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenetwork_monitoring_1a2bad3a65a3e2ccffc286683f29e25437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def networkMonitoring.get_local</definition>
+        <argsstring></argsstring>
+        <name>get_local</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="48" column="1" bodyfile="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" bodystart="48" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
