@@ -163,10 +163,12 @@ class network():
     mac=""                      #Physical address
     devices=[]                  #List Network devices
     openPorts=[]                #List Found open ports
+    ip_list=[]
 
-    def __init__(self, **kwargs):
+    def __init__(self, ip_list):
         #search devices
         print("[INFO]\tGetting network devices")
+        self.ip_list = ip_list
         for i in ip_list:
             try:
                 sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
