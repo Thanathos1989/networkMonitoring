@@ -163,7 +163,7 @@ class network():
     mac=""                      #Physical address
     devices=[]                  #List Network devices
     openPorts=[]                #List Found open ports
-    ip_list=[]
+    ip_list=[]                  #List for ip`s
 
     def __init__(self, ip_list):
         #search devices
