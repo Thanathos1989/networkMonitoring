@@ -158,7 +158,7 @@ class pc():
         self.if_bytesRec=net_io.bytes_recv
         del if_add, net_io
 
-class network():
+class network(object):
     ip=""                       #Scanned IP
     mac=""                      #Physical address
     devices=[]                  #List Network devices
