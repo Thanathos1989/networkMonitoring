@@ -6,17 +6,24 @@ import platform
 import GPUtil
 import socket
 import subprocess
+import struct
 from threading import Thread
+#import wmi
+import csv
+
+from itertools import islice
+from ipaddress import ip_network
+import math as m
 
 ###VAR
-verbose = False
-network = False
-local = False
-full = True
-path = "."
-file = "/Scan.json"
-result_local = []
-result_network = []
+verbose = False                 #verbose output actualy useless
+network = False                 #network test (show the networkdevices)
+local = False                   #local system test (Hardware an System)
+full = True                     #booth network and local
+path = "."                      #outputpath
+file = "/Scan.csv"              #name of outputfile
+result_local = []               #List masterlist from local
+result_network = []             #List masterlist from network
 
 #debug
 print(sys.argv[1:])
@@ -46,6 +53,7 @@ class pc():
     cpu_frqCur=0                #Current Frequence of CPU
     cpu_usage=0                 #CPU usage in %
     cpu_coreUsage=[]            #List of logical cores and usage in %
+    #cpu_temp=""                 #FEHLT
 
     ram_total=0                 #Total RAM
     ram_avail=0                 #Available RAM
@@ -158,41 +166,29 @@ class pc():
         self.if_bytesRec=net_io.bytes_recv
         del if_add, net_io
 
-class network():
+class networking:
     ip=""                       #Scanned IP
     mac=""                      #Physical address
-    devices=[]                  #List Network devices
-    openPorts=[]                #List Found open ports
+    devices=[]                  #List Network devices USELESS?
+    openPorts=[]                #List Found open ports USELESS?
+    ip_list=[]                  #List from IP's
 
-    def __init__(self, **kwargs):
+    def __init__(self, list=[]):
+        def c2im(cidr):
+            if cidr=="":
+                print("[ERROR]\tc2im cant call")
+            else:
+                id=0
+                jmp=1
+                network, net_bits = cidr.split('/')
+                host_bits = 32 - int(net_bits)
+                netmask = socket.inet_ntoa(struct.pack('!I', (1 << 32) - (1 << host_bits)))
+                return network, netmask, net_bits
+        
         #search devices
-        print("[INFO]\tGetting network devices")
-        for i in ip_list:
-            try:
-                sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                sock.settimeout(0.1)
-                res=sock.connect_ex((i, 7))  #port 7 = echo in TCP/UDP for ping
-                sock.settimeout(None)
-                if res == 0:
-                    devices.append(i)
-                sock.close()
-            except Exception:
-                print("[ERROR] Class network get devices")
-                continue
-        print(f"[INFO]\tScan ports from {len(devices)} devices")
-        for i in devices:
-            for p in range(1024):
-                try:
-                    sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                    sock.settimeout(0.1)
-                    res=sock.connect_ex((i, p))  #port range(1024 = systemports)
-                    sock.settimeout(None)
-                    if res == 0:
-                        devices.append(i)
-                    sock.close()
-                except Exception:
-                    print("[ERROR] Class network get devices")
-                    continue
+        print("[INFO]\tGetting network information")
+        
+
 
 
 
@@ -270,13 +266,88 @@ def ip_input():                     #Retourn List 3D of IP's like [[[192, 168, 1
             else:
                 continue
 
+def out_csv(path, name, obj):
+    path = str(path)
+    name = str(name)
+    l_disk={}
+    l_gpu={}
+    l_if={}
+    l_core={}
+    l_process={}
+
+    for i in obj.disk_list:
+        l_disk={"key":"disk "+i[0],"device":i[0],"mountpoint":i[1],"filesystem":i[2],"usage_total":i[3],"usage_used":i[4],"usage_free":i[5],"usage_percent":i[6]}
+    for i in obj.gpu_list:
+        l_gpu={"key":"gpu "+str(i[0]),"gpu_id":i[0],"gpu_name":i[1],"gpu_usage":i[2],"gpu_free":i[3],"gpu_used":i[4],"gpu_total":i[5],"gpu_temp":i[6]}
+    for i in obj.if_list:
+        l_if={"key":"if "+i[0],"if_name":i[0],"if_address":i[1],"if_netmask":i[2],"if_broadcast":i[3]}
+    for i in obj.cpu_coreUsage:
+        c=1
+        l_core={"key":"core "+str(c),"value":i}
+        c=c+1
+    for i in obj.sys_processes:
+        l_process={"key":"proc "+i[2],"os_process":i[0],"pid":i[1],"name":i[2],"status":i[3],"create_time":i[4],"cpu_usage":i[5],"cpu_cores":i[6],"memory":i[7],"user":i[8]}
+
+    with open(f"{path}{name}.csv", "w") as f:
+        fields=["key","value",
+                "os_process","pid","name","status","create_time","cpu_usage","cpu_cores","memory","user",
+                "device","mountpoint","filesystem","usage_total","usage_used","usage_free","usage_percent",
+                "gpu_id","gpu_name","gpu_usage","gpu_free","gpu_used","gpu_total","gpu_temp",
+                "if_name","if_address","if_netmask","if_broadcast",
+                ]
+        out = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+        out.writeheader()
+
+        data = [{"key":"node","value":obj.node},                                    #name from Device
+                {"key":"os_system","value":obj.os_system},                          #START -- OS
+                {"key":"os_rel","value":obj.os_rel},                                
+                {"key":"os_ver","value":obj.os_ver},
+                {"key":"os_bootTime","value":obj.os_bootTime},                      #END -- os
+                {"key":"user_name","value":obj.user_name},                          #START -- USER
+                {"key":"user_started","value":obj.user_started},
+                {"key":"user_terminal","value":obj.user_terminal},                  #END -- user
+                {"key":"ram_total","value":obj.ram_total},                          #START -- RAM
+                {"key":"ram_avail","value":obj.ram_avail},
+                {"key":"ram_used","value":obj.ram_used},
+                {"key":"ram_perc","value":obj.ram_perc},
+                {"key":"ram_Stotal","value":obj.ram_Stotal},
+                {"key":"ram_Sfree","value":obj.ram_Sfree},
+                {"key":"ram_Sused","value":obj.ram_Sused},
+                {"key":"ram_Sperc","value":obj.ram_Sperc},                          #END -- ram
+                {"key":"disk_read","value":obj.disk_read},                          #START -- DISK
+                {"key":"disk_write","value":obj.disk_write},                        #END -- disk
+                l_disk,
+                {"key":"cpu_machine","value":obj.cpu_machine},
+                {"key":"cpu_name","value":obj.cpu_name},
+                {"key":"cpu_realCores","value":obj.cpu_realCores},
+                {"key":"cpu_logiCores","value":obj.cpu_logiCores},
+                {"key":"cpu_frqMax","value":obj.cpu_frqMax},
+                {"key":"cpu_frqCur","value":obj.cpu_frqCur},
+                {"key":"cpu_usage","value":obj.cpu_usage},
+                {"key":"cpu_temp","value":obj.cpu_temp},
+                l_core,
+                l_gpu,
+                l_if,
+                {"key":"if_sent","value":obj.if_bytesSent},
+                {"key":"if_rec","value":obj.if_bytesRec},
+                l_process
+                ]
+        #{"key":"","value":obj.},
+
+        #Write the values from data into CSV by line
+        for i in range(len(data)):
+            out.writerow(data[i])
+    
 #mainfunctions for Programm            
 def get_network():
+
     start=datetime.datetime.now()               #debug
 
     print("[INFO]\tGetting network information")
-    ip_list=ip_extract(ip_input())
-    nw=network(ip_list)
+    #ip_list=ip_extract(ip_input())             #debug
+    #ip_list=["192.168.1.5"]                    #debug
+    nw=networking()
+
     print("[INFO]\tFinished network information\n")
 
     end=datetime.datetime.now()                 #debug
@@ -285,11 +356,86 @@ def get_network():
 
 def get_local():
     start=datetime.datetime.now()               #debug
+    def out_csv(path, name, obj):
+        path = str(path)
+        name = str(name)
+        l_disk=[]
+        l_gpu=[]
+        l_if=[]
+        l_core=[]
+        l_process=[]
+
+        for i in obj.disk_list:
+            l_disk.append({"key":"disk "+i[0],"device":i[0],"mountpoint":i[1],"filesystem":i[2],"usage_total":i[3],"usage_used":i[4],"usage_free":i[5],"usage_percent":i[6]})
+        for i in obj.gpu_list:
+            l_gpu.append({"key":"gpu "+str(i[0]),"gpu_id":i[0],"gpu_name":i[1],"gpu_usage":i[2],"gpu_free":i[3],"gpu_used":i[4],"gpu_total":i[5],"gpu_temp":i[6]})
+        for i in obj.if_list:
+            l_if.append({"key":"if "+i[0],"if_name":i[0],"if_address":i[1],"if_netmask":i[2],"if_broadcast":i[3]})
+        for i in obj.cpu_coreUsage:
+            print(i)
+            c=1
+            l_core.append({"key":"core "+str(c),"value":i})
+            print(l_core)
+            c=c+1
+        for i in obj.sys_processes:
+            l_process.append({"key":"proc "+i[2],"os_process":i[0],"pid":i[1],"name":i[2],"status":i[3],"create_time":i[4],"cpu_usage":i[5],"cpu_cores":i[6],"memory":i[7],"user":i[8]})
+
+        with open(f"{path}{name}.csv", "w") as f:
+            fields=["key","value",
+                    "os_process","pid","name","status","create_time","cpu_usage","cpu_cores","memory","user",
+                    "device","mountpoint","filesystem","usage_total","usage_used","usage_free","usage_percent",
+                    "gpu_id","gpu_name","gpu_usage","gpu_free","gpu_used","gpu_total","gpu_temp",
+                    "if_name","if_address","if_netmask","if_broadcast",
+                    ]
+            out = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+            out.writeheader()
+
+            data = [{"key":"node","value":obj.node},                                    #name from Device
+                    {"key":"os_system","value":obj.os_system},                          #START -- OS
+                    {"key":"os_rel","value":obj.os_rel},                                
+                    {"key":"os_ver","value":obj.os_ver},
+                    {"key":"os_bootTime","value":obj.os_bootTime},                      #END -- os
+                    {"key":"user_name","value":obj.user_name},                          #START -- USER
+                    {"key":"user_started","value":obj.user_started},
+                    {"key":"user_terminal","value":obj.user_terminal},                  #END -- user
+                    {"key":"ram_total","value":obj.ram_total},                          #START -- RAM
+                    {"key":"ram_avail","value":obj.ram_avail},
+                    {"key":"ram_used","value":obj.ram_used},
+                    {"key":"ram_perc","value":obj.ram_perc},
+                    {"key":"ram_Stotal","value":obj.ram_Stotal},
+                    {"key":"ram_Sfree","value":obj.ram_Sfree},
+                    {"key":"ram_Sused","value":obj.ram_Sused},
+                    {"key":"ram_Sperc","value":obj.ram_Sperc},                          #END -- ram
+                    {"key":"disk_read","value":obj.disk_read},                          #START -- DISK
+                    {"key":"disk_write","value":obj.disk_write},                        #END -- disk
+                    {"key":"cpu_machine","value":obj.cpu_machine},                      #START -- CPU
+                    {"key":"cpu_name","value":obj.cpu_name},
+                    {"key":"cpu_realCores","value":obj.cpu_realCores},
+                    {"key":"cpu_logiCores","value":obj.cpu_logiCores},
+                    {"key":"cpu_frqMax","value":obj.cpu_frqMax},
+                    {"key":"cpu_frqCur","value":obj.cpu_frqCur},
+                    {"key":"cpu_usage","value":obj.cpu_usage},                          #END -- cpu
+                    {"key":"if_sent","value":obj.if_bytesSent},                         #START -- Interfaces
+                    {"key":"if_rec","value":obj.if_bytesRec},                           #END -- interfaces
+                    ]
+            #{"key":"","value":obj.},
+
+            #Write the values from data into CSV by line
+            for i in range(len(data)):
+                out.writerow(data[i])
+            for i in l_disk:
+                out.writerow(i)
+            for i in l_gpu:
+                out.writerow(i)
+            for i in l_core:
+                out.writerow(i)
+            for i in l_process:
+                out.writerow(i)
 
     print("[INFO]\tGetting local information")
     local=pc()
     print("[INFO]\tFinished local information\n")
-
+    out_csv(".\\", str(local.node)+"_System", local)                                #Output the csv file
     end=datetime.datetime.now()                 #debug
     print(f"Dauer:{end-start}")                 #debug
     #Grafical outup from local
@@ -324,6 +470,9 @@ if "-f" in opt:
     local = False
     network = False
 
+
+print(int(m.pow(255,2)))
+
 #Aufruf Funktionen
 if full == True:
     get_local()
@@ -339,8 +488,37 @@ if network == True:
     debug("network")
 
 ###++++++++++++++++++++++++++++ END-PROGRAM ++++++++++++++++++++++++++++### 
+'''
+print("="*80)
+for i in psutil.net_connections(kind="all"):
+    #print(i)
+    p=psutil.Process(i[6]) 
+    print(p.name())
+    print(f"\tSocket: {i[3]}, Remote: {i[4]}, Status: {i[5]}, PID: {i[6]}, Name: {p.name()}, Status: {p.status()}")
 
 print("="*80)
+
+x=psutil.net_if_stats()
+for i in x:
+    print(i)
+    for j in x[i]:
+        print(f"\t{x[i]}")
+
+print("="*80)
+
+x=psutil.net_if_addrs()
+for i in x:
+    print(i)
+    for j in x[i]:
+        print(f"\t{j}")
+
+xe=pc()
+for i in xe.sys_processes:
+    print(i)
+for i in xe.disk_list:
+    print(i)
+'''
+print("#"*80)
 
 
 #def_network

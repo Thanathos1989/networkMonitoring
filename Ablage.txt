@@ -40,3 +40,41 @@ del x
 
 uname = platform.uname()
 print(f"System: {uname.system}")
+
+
+
+
+
+
+    def __init__(self, list=[]):
+        for i in list:
+            print(i)
+        #search devices
+        print("[INFO]\tGetting network devices")
+        self.ip_list = list
+        for i in self.ip_list:
+            try:
+                sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sock.settimeout(0.1)
+                res=sock.connect_ex((i, 7))  #port 7 = echo in TCP/UDP for ping
+                sock.settimeout(None)
+                if res == 0:
+                    devices.append(i)
+                sock.close()
+            except Exception:
+                print("[ERROR] Class network get devices")
+                continue
+        print(f"[INFO]\tScan ports from {len(devices)} devices")
+        for i in devices:
+            for p in range(1024):
+                try:
+                    sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    sock.settimeout(0.1)
+                    res=sock.connect_ex((i, p))  #port range(1024 = systemports)
+                    sock.settimeout(None)
+                    if res == 0:
+                        devices.append(i)
+                    sock.close()
+                except Exception:
+                    print("[ERROR] Class network get devices")
+                    continue
