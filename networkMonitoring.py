@@ -26,8 +26,8 @@ result_local = []               #List masterlist from local
 result_network = []             #List masterlist from network
 
 #debug
-print(sys.argv[1:])
-print("")
+#print(sys.argv[1:])
+#print("")
 
 ###Programm
 ##Klassen
@@ -90,26 +90,31 @@ class pc():
         #Processes
         for p in psutil.process_iter():
             with p.oneshot():
-                pid=p.pid
-                if pid==0:
-                    continue
-                name=p.name()
                 try:
-                    os_process=False
-                    create_time=datetime.datetime.fromtimestamp(p.create_time())
-                except OSError:
-                    os_process=True
-                    create_time=datetime.datetime.fromtimestamp(psutil.boot_time())
-                cpu_usage=p.cpu_percent()
-                try:
-                    cpu_cores=len(p.cpu_affinity())
-                    memory=p.memory_full_info().uss
-                    user=p.username()
-                except psutil.AccessDenied:
-                    cpu_cores=0
-                    memory=-0
-                    user="unknown"
-                status=p.status()
+                    pid=p.pid
+                    if pid==0:
+                        continue
+                    name=p.name()
+                    try:
+                        os_process=False
+                        create_time=datetime.datetime.fromtimestamp(p.create_time())
+                    except OSError:
+                        os_process=True
+                        create_time=datetime.datetime.fromtimestamp(psutil.boot_time())
+                    cpu_usage=p.cpu_percent()
+                    try:
+                        cpu_cores=len(p.cpu_affinity())
+                        memory=p.memory_full_info().uss
+                        user=p.username()
+                    except psutil.AccessDenied:
+                        cpu_cores=0
+                        memory=-0
+                        user="unknown"
+                    status=p.status()
+                except Exception as inst:
+                    print(f"[ERROR] Instance:\t{type(inst)}")
+                    print(f"\targs:\t{inst.args}")
+                    print(f"\targs:\t{inst}")
             self.sys_processes.append([os_process,pid,name,status,create_time,cpu_usage,cpu_cores,memory,user])
 
         #CPU
@@ -186,12 +191,8 @@ class networking:
                 return network, netmask, net_bits
         
         #search devices
-        print("[INFO]\tGetting network information")
+        #print("[INFO]\tGetting network information")
         
-
-
-
-
 ##Funktionen
 def debug(txt):
     print("[DEBUG]\t"+txt)
@@ -265,78 +266,6 @@ def ip_input():                     #Retourn List 3D of IP's like [[[192, 168, 1
                 return ip_list      #Retourne List with the IP's 
             else:
                 continue
-
-def out_csv(path, name, obj):
-    path = str(path)
-    name = str(name)
-    l_disk={}
-    l_gpu={}
-    l_if={}
-    l_core={}
-    l_process={}
-
-    for i in obj.disk_list:
-        l_disk={"key":"disk "+i[0],"device":i[0],"mountpoint":i[1],"filesystem":i[2],"usage_total":i[3],"usage_used":i[4],"usage_free":i[5],"usage_percent":i[6]}
-    for i in obj.gpu_list:
-        l_gpu={"key":"gpu "+str(i[0]),"gpu_id":i[0],"gpu_name":i[1],"gpu_usage":i[2],"gpu_free":i[3],"gpu_used":i[4],"gpu_total":i[5],"gpu_temp":i[6]}
-    for i in obj.if_list:
-        l_if={"key":"if "+i[0],"if_name":i[0],"if_address":i[1],"if_netmask":i[2],"if_broadcast":i[3]}
-    for i in obj.cpu_coreUsage:
-        c=1
-        l_core={"key":"core "+str(c),"value":i}
-        c=c+1
-    for i in obj.sys_processes:
-        l_process={"key":"proc "+i[2],"os_process":i[0],"pid":i[1],"name":i[2],"status":i[3],"create_time":i[4],"cpu_usage":i[5],"cpu_cores":i[6],"memory":i[7],"user":i[8]}
-
-    with open(f"{path}{name}.csv", "w") as f:
-        fields=["key","value",
-                "os_process","pid","name","status","create_time","cpu_usage","cpu_cores","memory","user",
-                "device","mountpoint","filesystem","usage_total","usage_used","usage_free","usage_percent",
-                "gpu_id","gpu_name","gpu_usage","gpu_free","gpu_used","gpu_total","gpu_temp",
-                "if_name","if_address","if_netmask","if_broadcast",
-                ]
-        out = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
-        out.writeheader()
-
-        data = [{"key":"node","value":obj.node},                                    #name from Device
-                {"key":"os_system","value":obj.os_system},                          #START -- OS
-                {"key":"os_rel","value":obj.os_rel},                                
-                {"key":"os_ver","value":obj.os_ver},
-                {"key":"os_bootTime","value":obj.os_bootTime},                      #END -- os
-                {"key":"user_name","value":obj.user_name},                          #START -- USER
-                {"key":"user_started","value":obj.user_started},
-                {"key":"user_terminal","value":obj.user_terminal},                  #END -- user
-                {"key":"ram_total","value":obj.ram_total},                          #START -- RAM
-                {"key":"ram_avail","value":obj.ram_avail},
-                {"key":"ram_used","value":obj.ram_used},
-                {"key":"ram_perc","value":obj.ram_perc},
-                {"key":"ram_Stotal","value":obj.ram_Stotal},
-                {"key":"ram_Sfree","value":obj.ram_Sfree},
-                {"key":"ram_Sused","value":obj.ram_Sused},
-                {"key":"ram_Sperc","value":obj.ram_Sperc},                          #END -- ram
-                {"key":"disk_read","value":obj.disk_read},                          #START -- DISK
-                {"key":"disk_write","value":obj.disk_write},                        #END -- disk
-                l_disk,
-                {"key":"cpu_machine","value":obj.cpu_machine},
-                {"key":"cpu_name","value":obj.cpu_name},
-                {"key":"cpu_realCores","value":obj.cpu_realCores},
-                {"key":"cpu_logiCores","value":obj.cpu_logiCores},
-                {"key":"cpu_frqMax","value":obj.cpu_frqMax},
-                {"key":"cpu_frqCur","value":obj.cpu_frqCur},
-                {"key":"cpu_usage","value":obj.cpu_usage},
-                {"key":"cpu_temp","value":obj.cpu_temp},
-                l_core,
-                l_gpu,
-                l_if,
-                {"key":"if_sent","value":obj.if_bytesSent},
-                {"key":"if_rec","value":obj.if_bytesRec},
-                l_process
-                ]
-        #{"key":"","value":obj.},
-
-        #Write the values from data into CSV by line
-        for i in range(len(data)):
-            out.writerow(data[i])
     
 #mainfunctions for Programm            
 def get_network():
@@ -344,8 +273,16 @@ def get_network():
     start=datetime.datetime.now()               #debug
 
     print("[INFO]\tGetting network information")
-    #ip_list=ip_extract(ip_input())             #debug
-    #ip_list=["192.168.1.5"]                    #debug
+    def out_csv(path, name, obj):
+        path = str(path)
+        name = str(name)
+        l_disk=[]
+        l_gpu=[]
+        l_if=[]
+        l_core=[]
+        l_process=[]
+
+
     nw=networking()
 
     print("[INFO]\tFinished network information\n")
@@ -372,10 +309,8 @@ def get_local():
         for i in obj.if_list:
             l_if.append({"key":"if "+i[0],"if_name":i[0],"if_address":i[1],"if_netmask":i[2],"if_broadcast":i[3]})
         for i in obj.cpu_coreUsage:
-            print(i)
             c=1
             l_core.append({"key":"core "+str(c),"value":i})
-            print(l_core)
             c=c+1
         for i in obj.sys_processes:
             l_process.append({"key":"proc "+i[2],"os_process":i[0],"pid":i[1],"name":i[2],"status":i[3],"create_time":i[4],"cpu_usage":i[5],"cpu_cores":i[6],"memory":i[7],"user":i[8]})
@@ -431,61 +366,61 @@ def get_local():
                 out.writerow(i)
             for i in l_process:
                 out.writerow(i)
+            for i in l_if:
+                out.writerow(i)
 
-    print("[INFO]\tGetting local information")
+    print(f"[INFO]\tGetting local information\t{start}")
     local=pc()
-    print("[INFO]\tFinished local information\n")
     out_csv(".\\", str(local.node)+"_System", local)                                #Output the csv file
-    end=datetime.datetime.now()                 #debug
-    print(f"Dauer:{end-start}")                 #debug
+    end=datetime.datetime.now()                     #debug
+    print(f"[INFO]\tFinished local information\t{end}")
+    print(f"\tDauer:{end-start}\n")                   #debug
     #Grafical outup from local
 
 ###+++++++++++++++++++++++++++ START-PROGRAM +++++++++++++++++++++++++++###    
 ##Abfrage der Operatoren
-opts, rest = getopt.getopt(sys.argv[1:], "vnlfo:")
-'''
--v  = Komplette Ausgabe
--n  = Netzwerkscan only
--l  = Localscan only
--f  = Scant Local & Netzwerk + Ports
--o  = Outputpfad (Ordnerpfad)
-'''
-for opt, arg in opts:
-    if opt == "-v":
-        verbose = True
-    if opt == "-n":
-        network = True
-    if opt == "-l":
-        local = True
-    if opt == "-o":
-        path = arg
+if __name__ == "__main__":
+    opts, rest = getopt.getopt(sys.argv[1:], "vnlfo:")
+    '''
+    -v  = Komplette Ausgabe
+    -n  = Netzwerkscan only
+    -l  = Localscan only
+    -f  = Scant Local & Netzwerk + Ports
+    -o  = Outputpfad (Ordnerpfad)
+    '''
+    for opt, arg in opts:
+        if opt == "-v":
+            verbose = True
+        if opt == "-n":
+            network = True
+        if opt == "-l":
+            local = True
+        if opt == "-o":
+            path = arg
 
-#Steuerung
-if network == True:
-    full = False
-if local == True:
-    full = False
-if "-f" in opt:
-    full = True
-    local = False
-    network = False
+    #Steuerung
+    if network == True:
+        full = False
+    if local == True:
+        full = False 
+    if "-f" in opt:
+        full = True
+        local = False
+        network = False
 
+    #Aufruf Funktionen
+    if full == True:
+        get_local()
+        get_network()
+        debug("full")
 
-print(int(m.pow(255,2)))
+    if local == True:
+        get_local()
+        #debug("local")
 
-#Aufruf Funktionen
-if full == True:
-    get_local()
-    get_network()
-    debug("full")
-
-if local == True:
-    get_local()
-    debug("local")
-
-if network == True:
-    get_network()
-    debug("network")
+    if network == True:
+        get_network()
+        debug("network")
 
 ###++++++++++++++++++++++++++++ END-PROGRAM ++++++++++++++++++++++++++++### 
 '''
@@ -518,7 +453,6 @@ for i in xe.sys_processes:
 for i in xe.disk_list:
     print(i)
 '''
-print("#"*80)
 
 
 #def_network
