@@ -1,19 +1,24 @@
-import sys
-import getopt
-import psutil
-import datetime
-import platform
-import GPUtil
-import socket
-import subprocess
-import struct
-from threading import Thread
+import sys                              #stabdard
+import os
+import re
+import getopt                           #?
+import psutil                           #import         C:/Users/Dragback/AppData/Local/Programs/Python/Python38/Lib/site-packages/psutil
+import datetime                         #standard
+import platform                         #? TCL          C:/Users/Dragback/AppData/Local/Programs/Python/Python38/tcl/tcl8/8.4/platform
+import GPUtil                           #import         C:/Users/Dragback/AppData/Local/Programs/Python/Python38/Lib/site-packages/GPUtil
+import socket                           #standard
+import subprocess                       #standard
+import struct                           #standard ?
+from threading import Thread            #standard
 #import wmi
-import csv
+import csv                              #standard ?
 
-from itertools import islice
-from ipaddress import ip_network
-import math as m
+from itertools import islice            #standard ?
+from ipaddress import ip_network        #standard ?
+import math as m                        #import         C:/Users/Dragback/AppData/Local/Programs/Python/Python38/Lib/site-packages/docutils/utils/math
+
+#########MAKE-SCRIPT##########
+#pyinstaller --noconfirm --onedir --console --icon "C:/Users/Dragback/Downloads/ico_file.ico" --add-data "C:/Users/Dragback/AppData/Local/Programs/Python/Python38/Lib/site-packages/psutil;psutil/" --add-data "C:/Users/Dragback/AppData/Local/Programs/Python/Python38/tcl/tcl8/8.4/platform;platform/" --add-data "C:/Users/Dragback/AppData/Local/Programs/Python/Python38/Lib/site-packages/GPUtil;GPUtil/" --add-data "C:/Users/Dragback/AppData/Local/Programs/Python/Python38/Lib/site-packages/docutils/utils/math;math/"  "C:/Users/Dragback/source/repos/networkMonitoring/networkMonitoring.py"
 
 ###VAR
 verbose = False                 #verbose output actualy useless
@@ -26,8 +31,8 @@ result_local = []               #List masterlist from local
 result_network = []             #List masterlist from network
 
 #debug
-#print(sys.argv[1:])
-#print("")
+print(sys.argv[1:])
+print("")
 
 ###Programm
 ##Klassen
@@ -172,26 +177,14 @@ class pc():
         del if_add, net_io
 
 class networking:
-    ip=""                       #Scanned IP
-    mac=""                      #Physical address
-    devices=[]                  #List Network devices USELESS?
-    openPorts=[]                #List Found open ports USELESS?
-    ip_list=[]                  #List from IP's
+    arp=[]                          #list 2D of Devices in ARP-Cache
 
-    def __init__(self, list=[]):
-        def c2im(cidr):
-            if cidr=="":
-                print("[ERROR]\tc2im cant call")
-            else:
-                id=0
-                jmp=1
-                network, net_bits = cidr.split('/')
-                host_bits = 32 - int(net_bits)
-                netmask = socket.inet_ntoa(struct.pack('!I', (1 << 32) - (1 << host_bits)))
-                return network, netmask, net_bits
-        
-        #search devices
-        #print("[INFO]\tGetting network information")
+    data=os.popen("arp -a").read()
+
+    for line in re.findall('([-.0-9]+)\s+([-0-9a-f]{17})\s+(\w+)',data):
+        arp.append(line)
+
+
         
 ##Funktionen
 def debug(txt):
@@ -269,26 +262,41 @@ def ip_input():                     #Retourn List 3D of IP's like [[[192, 168, 1
     
 #mainfunctions for Programm            
 def get_network():
-
     start=datetime.datetime.now()               #debug
-
-    print("[INFO]\tGetting network information")
+    uname = platform.uname()
+    node = uname.node
+    
+    print(f"[INFO]\tGetting network information\tat\t{start}")
     def out_csv(path, name, obj):
         path = str(path)
         name = str(name)
-        l_disk=[]
-        l_gpu=[]
-        l_if=[]
-        l_core=[]
-        l_process=[]
+        obj=obj
+        data=[]
+        
+        try:
+            os.makedirs(path)
+        except OSError:
+            if not os.path.isdir(path):
+                raise
 
+        with open(f"{path}network_{name}.csv", "w") as f:
+            fields=["key","ip","mac","typ"]
+            out = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+            out.writeheader()
+
+            for i in range(len(obj.arp)):
+                data.append({"key":name,"ip":obj.arp[i][0],"mac":obj.arp[i][1],"typ":obj.arp[i][2],})
+
+            #Write the values from data into CSV by line
+            for i in range(len(data)):
+                out.writerow(data[i])
 
     nw=networking()
-
-    print("[INFO]\tFinished network information\n")
-
+    out_csv(path,node,nw)
+    print(f"[EXPO]\tExport to: {path}network_{str(node)}.csv")
     end=datetime.datetime.now()                 #debug
-    print(f"Dauer:{end-start}")                 #debug
+    print(f"[INFO]\tFinished network information\tat\t{end}")
+    print(f"\tTime: {end-start}\n")                 #debug
     
 
 def get_local():
@@ -301,7 +309,13 @@ def get_local():
         l_if=[]
         l_core=[]
         l_process=[]
-
+        c=1
+        
+        try:
+            os.makedirs(path)
+        except OSError:
+            if not os.path.isdir(path):
+                raise
         for i in obj.disk_list:
             l_disk.append({"key":"disk "+i[0],"device":i[0],"mountpoint":i[1],"filesystem":i[2],"usage_total":i[3],"usage_used":i[4],"usage_free":i[5],"usage_percent":i[6]})
         for i in obj.gpu_list:
@@ -309,13 +323,13 @@ def get_local():
         for i in obj.if_list:
             l_if.append({"key":"if "+i[0],"if_name":i[0],"if_address":i[1],"if_netmask":i[2],"if_broadcast":i[3]})
         for i in obj.cpu_coreUsage:
-            c=1
+            c
             l_core.append({"key":"core "+str(c),"value":i})
             c=c+1
         for i in obj.sys_processes:
             l_process.append({"key":"proc "+i[2],"os_process":i[0],"pid":i[1],"name":i[2],"status":i[3],"create_time":i[4],"cpu_usage":i[5],"cpu_cores":i[6],"memory":i[7],"user":i[8]})
 
-        with open(f"{path}{name}.csv", "w") as f:
+        with open(f"{path}local_{name}.csv", "w") as f:
             fields=["key","value",
                     "os_process","pid","name","status","create_time","cpu_usage","cpu_cores","memory","user",
                     "device","mountpoint","filesystem","usage_total","usage_used","usage_free","usage_percent",
@@ -369,12 +383,13 @@ def get_local():
             for i in l_if:
                 out.writerow(i)
 
-    print(f"[INFO]\tGetting local information\t{start}")
+    print(f"[INFO]\tGetting local information\tat\t{start}")
     local=pc()
-    out_csv(".\\", str(local.node)+"_System", local)                                #Output the csv file
-    end=datetime.datetime.now()                     #debug
-    print(f"[INFO]\tFinished local information\t{end}")
-    print(f"\tDauer:{end-start}\n")                   #debug
+    out_csv(path, str(local.node)+"_System", local)                                #Output the csv file
+    print(f"[EXPO]\tExport to: {path}local_{str(local.node)}.csv")
+    end=datetime.datetime.now()                 #debug
+    print(f"[INFO]\tFinished local information\tat\t{end}")
+    print(f"\tTime: {end-start}\n")             #debug
     #Grafical outup from local
 
 ###+++++++++++++++++++++++++++ START-PROGRAM +++++++++++++++++++++++++++###    
@@ -397,63 +412,31 @@ if __name__ == "__main__":
             local = True
         if opt == "-o":
             path = arg
+        if opt == "":
+            pass
 
     #Steuerung
     if network == True:
         full = False
     if local == True:
         full = False 
-    if "-f" in opt:
+    if "-f" in opts:
         full = True
         local = False
         network = False
+    else:
+        pass
 
     #Aufruf Funktionen
     if full == True:
         get_local()
         get_network()
-        debug("full")
 
     if local == True:
         get_local()
-        #debug("local")
 
     if network == True:
         get_network()
-        debug("network")
 
 ###++++++++++++++++++++++++++++ END-PROGRAM ++++++++++++++++++++++++++++### 
-'''
-print("="*80)
-for i in psutil.net_connections(kind="all"):
-    #print(i)
-    p=psutil.Process(i[6]) 
-    print(p.name())
-    print(f"\tSocket: {i[3]}, Remote: {i[4]}, Status: {i[5]}, PID: {i[6]}, Name: {p.name()}, Status: {p.status()}")
 
-print("="*80)
-
-x=psutil.net_if_stats()
-for i in x:
-    print(i)
-    for j in x[i]:
-        print(f"\t{x[i]}")
-
-print("="*80)
-
-x=psutil.net_if_addrs()
-for i in x:
-    print(i)
-    for j in x[i]:
-        print(f"\t{j}")
-
-xe=pc()
-for i in xe.sys_processes:
-    print(i)
-for i in xe.disk_list:
-    print(i)
-'''
-
-
-#def_network
-#scan funktioniert noch nicht
