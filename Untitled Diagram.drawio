@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-28T07:04:04.684Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36 OPR/75.0.3969.218" etag="C38s1xxPTLdaI3sPPTmG" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-28T07:07:29.636Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36 OPR/75.0.3969.218" etag="lsFt9ZdkfEBpLFreQhI3" version="14.6.6" type="github">
   <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
     <mxGraphModel dx="1382" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
       <root>
@@ -8,7 +8,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-2" value="Start" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="75" y="40" width="110" height="50" as="geometry" />
+          <mxGeometry x="360" y="40" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-15" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.125;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-4" target="s83j-BUwnU0X72fGFEWC-6">
           <mxGeometry relative="1" as="geometry" />
@@ -17,50 +17,40 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-4" value="Abfrage &lt;br&gt;Attribute" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="75" y="120" width="110" height="50" as="geometry" />
+          <mxGeometry x="360" y="120" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-6" value="Attribute" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="235" y="120" width="240" height="170" as="geometry" />
+          <mxGeometry x="520" y="120" width="240" height="170" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-8" value="-v : Komplette Ausgabe (nicht unterstützt)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=2" vertex="1" parent="1">
-          <mxGeometry x="235" y="160" width="240" height="26" as="geometry" />
+          <mxGeometry x="520" y="160" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-9" value="-n : Networkscan" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
-          <mxGeometry x="235" y="186" width="240" height="26" as="geometry" />
+          <mxGeometry x="520" y="186" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-10" value="-l : Localscan" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
-          <mxGeometry x="235" y="212" width="240" height="26" as="geometry" />
+          <mxGeometry x="520" y="212" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-11" value="-f : Fullscan (default)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="235" y="238" width="240" height="26" as="geometry" />
+          <mxGeometry x="520" y="238" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-12" value="-o : Outputpath" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
-          <mxGeometry x="235" y="264" width="240" height="26" as="geometry" />
+          <mxGeometry x="520" y="264" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-16" target="s83j-BUwnU0X72fGFEWC-18">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-16" value="Setzen der &lt;br&gt;Einstellungen" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="75" y="200" width="110" height="50" as="geometry" />
+          <mxGeometry x="360" y="200" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="s83j-BUwnU0X72fGFEWC-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=20;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-18" target="s83j-BUwnU0X72fGFEWC-20">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="103" y="350" />
-              <mxPoint x="60" y="350" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=20;entryDy=0;entryPerimeter=0;fontSize=17;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-18" target="s83j-BUwnU0X72fGFEWC-20">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s83j-BUwnU0X72fGFEWC-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=20;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-18" target="s83j-BUwnU0X72fGFEWC-21">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="158" y="350" />
-              <mxPoint x="740" y="350" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=20;entryDy=0;entryPerimeter=0;fontSize=17;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-18" target="s83j-BUwnU0X72fGFEWC-21">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-18" value="Aufruf der &lt;br&gt;Funktionen" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="75" y="290" width="110" height="50" as="geometry" />
+          <mxGeometry x="360" y="290" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=17;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-20" target="s83j-BUwnU0X72fGFEWC-29">
           <mxGeometry relative="1" as="geometry">
@@ -101,8 +91,14 @@
         <mxCell id="s83j-BUwnU0X72fGFEWC-25" value="And / or" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;fontStyle=1;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="310" y="380" width="230" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=17;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-29" target="s83j-BUwnU0X72fGFEWC-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-29" value="get_local" style="shape=umlFrame;whiteSpace=wrap;html=1;fontSize=17;strokeColor=#000000;width=120;height=30;" vertex="1" parent="1">
           <mxGeometry x="40" y="440" width="360" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=17;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-30" target="s83j-BUwnU0X72fGFEWC-51">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-30" value="get_network" style="shape=umlFrame;whiteSpace=wrap;html=1;fontSize=17;strokeColor=#000000;width=120;height=30;" vertex="1" parent="1">
           <mxGeometry x="440" y="440" width="360" height="400" as="geometry" />
@@ -136,6 +132,21 @@
         </mxCell>
         <mxCell id="s83j-BUwnU0X72fGFEWC-47" value="    node = &quot;&quot;                       #PC Name&#xa;    &#xa;    os_system = &quot;&quot;              #System Type &quot;Win, Linux, ...&quot;&#xa;    os_rel = &quot;&quot;                     #OS Release &quot;10&quot;&#xa;    os_ver = &quot;&quot;                    #OS Version &quot;10.0.18362&quot;&#xa;    os_bootTime=&quot;&quot;            #OS Startup&#xa;&#xa;    sys_processes=[]            #List 2D of SystemProcesses [os_process,pid,name,status,create_time,cpu_usage,cpu_cores,memory,user]&#xa;    &#xa;    user_name = &quot;&quot;              #Active User&#xa;    user_started = 0            #Last startup&#xa;    user_terminal = None        #Terminalmodus&#xa;    &#xa;    cpu_machine = &quot;&quot;            #Machinearch. &quot;AMD64&quot;&#xa;    cpu_name = &quot;&quot;               #CPU Name &quot;Intel64 Family 6 Model 60 Stepping 3, GenuineIntel&quot;&#xa;    cpu_realCores=0             #Real Cores on CPU&#xa;    cpu_logiCores=0             #Logic Cores in CPU&#xa;    cpu_frqMax=0                #Max Frequence of CPU&#xa;    cpu_frqCur=0                #Current Frequence of CPU&#xa;    cpu_usage=0                 #CPU usage in %&#xa;    cpu_coreUsage=[]            #List of logical cores and usage in %&#xa;    #cpu_temp=&quot;&quot;                 #FEHLT&#xa;&#xa;    ram_total=0                  #Total RAM&#xa;    ram_avail=0                 #Available RAM&#xa;    ram_used=0                  #Used RAM&#xa;    ram_perc=0                  #Used RAM in Percent&#xa;    ram_Stotal=0                #Total Swap&#xa;    ram_Sfree=0                 #Available Swap&#xa;    ram_Sused=0                 #Used Swap&#xa;    ram_Sperc=0                 #Used Swap in Percent&#xa;&#xa;    disk_list=[]                      #List 2D of all disks connected to PC (device, mountpoint, filesystem, part_usage.total,part_usage.used,part_usage.free,part_usage.percent)&#xa;    disk_read=0                  #Read Bytes since Boot&#xa;    disk_write=0                  #Write Bytes since Boot&#xa;&#xa;    gpu_list=[]                      #List 2D GPU (id, name, usage(%), free mem(byte), used mem(byte), total mem(byte), temperature(°C))&#xa;&#xa;    if_list=[]                          #List 2D of Interfaces&#xa;    if_bysteSent=0              #Network sendet Bytes&#xa;    if_bytesRec=0               #Network recived Bytes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="s83j-BUwnU0X72fGFEWC-46">
           <mxGeometry y="26" width="140" height="584" as="geometry" />
+        </mxCell>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontSize=17;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-50" target="s83j-BUwnU0X72fGFEWC-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-50" value="Ausgabe&lt;br&gt;Kommandozeile" style="html=1;fontSize=17;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="142.5" y="880" width="155" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=17;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="s83j-BUwnU0X72fGFEWC-51" target="s83j-BUwnU0X72fGFEWC-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-51" value="Ausgabe&lt;br&gt;Kommandozeile" style="html=1;fontSize=17;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="542.5" y="880" width="155" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s83j-BUwnU0X72fGFEWC-54" value="Programmende" style="html=1;fontSize=17;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="355" y="960" width="140" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
