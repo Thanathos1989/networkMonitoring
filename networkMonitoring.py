@@ -10,6 +10,7 @@ import socket                           #standard
 import subprocess                       #standard
 import struct                           #standard ?
 from threading import Thread            #standard
+from pathlib import Path
 #import wmi
 import csv                              #standard ?
 
@@ -291,6 +292,25 @@ def get_network():
             for i in range(len(data)):
                 out.writerow(data[i])
 
+        try:
+            with open(f"{path}network_all.csv", "a") as f:
+                check = Path(f"{path}network_all.csv")
+                if not check.is_file():
+                    fields=["key","ip","mac","typ"]
+                    out = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+                    out.writeheader()
+                else:
+                    fields=["key","ip","mac","typ"]
+                    out = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+
+                #Write the values from data into CSV by line
+                for i in range(len(data)):
+                    out.writerow(data[i])
+            print(f"[EXPO]\tExport to: {path}network_all.csv")
+        except OSError:
+            if not os.path.isdir(path):
+                raise
+
     nw=networking()
     out_csv(path,node,nw)
     print(f"[EXPO]\tExport to: {path}network_{str(node)}.csv")
@@ -395,8 +415,9 @@ def get_local():
 ###+++++++++++++++++++++++++++ START-PROGRAM +++++++++++++++++++++++++++###    
 ##Abfrage der Operatoren
 if __name__ == "__main__":
-    opts, rest = getopt.getopt(sys.argv[1:], "vnlfo:")
+    opts, rest = getopt.getopt(sys.argv[1:], "hvnlfo:")
     '''
+    -h  = Help
     -v  = Komplette Ausgabe
     -n  = Netzwerkscan only
     -l  = Localscan only
@@ -404,6 +425,13 @@ if __name__ == "__main__":
     -o  = Outputpfad (Ordnerpfad)
     '''
     for opt, arg in opts:
+        if opt == "-h":
+            print("\n[SYS]\tYou can use this operators:\n\t\tProgram [-h -n -l -o]")
+            print("\t\t-h\t= Help (MUST be the first operator)")
+            print("\t\t-n\t= Networkscan ONLY")
+            print("\t\t-l\t= Localscan ONLY")
+            print("\t\t-o\t= Outputpath (example: -o 'folder/'")
+            sys.exit(0)
         if opt == "-v":
             verbose = True
         if opt == "-n":
